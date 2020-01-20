@@ -43,8 +43,3 @@ class ESP:
             return status
         except:
             ConnectionError
-    
-
-
-#hi hi
-#still working out git

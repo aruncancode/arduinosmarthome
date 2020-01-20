@@ -1,0 +1,47 @@
+#ASP VERSION 0.5 - 7/10/19
+
+Major improvments:
+  	- improved get requests and update efficiency
+  	- added component and status dicts
+ 	- improved update efficiency
+
+QOL changes:
+  	- easier to change pin of any component
+  	- easier to change ip of esp
+  	- easier to add esps and components
+
+Indevelopment/Future updates:
+	- google home support
+	- databases/logs (csv files/ excel)
+	- improved gui for webpage
+	- ESP ---> Flask(logged into database) -----> Thingspeak instead of ESP ------> Thingspeak ------> Flask(gui, not logged)
+
+
+#ASP VERSION 0.6 - 18/1/20 
+
+Major improvments:
+  	- added classes
+  	- patched component and status dicts
+	- instances
+
+QOL changes:
+    - easily change ip, add sensors and esps with new ESP class.
+	- easier connection of multiple esps 
+
+Indevelopment/Future updates:
+	- google home support
+	- databases/logs (csv files/ excel)
+	- improved gui for webpage
+
+
+
+#ASP VERSION 0.7 - 19/1/20
+
+Major improvments:
+  	- added ifttt suppport and google home support
+  	- using arest cloud api, you can now access the esp from anywhere in the world.
+	- connection timeout error
+
+Indevelopment/Future updates:
+	- databases/logs (csv files/ excel)
+	- improved gui for webpage

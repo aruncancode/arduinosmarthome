@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from ESP import *
+from ESP import ESP
 
 
 app = Flask(__name__)

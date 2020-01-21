@@ -20,11 +20,11 @@ PubSubClient client(espClient);
 aREST rest = aREST(client);
 
 // aREST API key (that you can get at dashboard.arest.io)
-char * key = "ws8bg538ug8ijb9s";
+char * key = "";
 
 // WiFi parameters
-const char* ssid = "ArjunanAccess";
-const char* password = "rh56956hsv";
+const char* ssid = "";
+const char* password = "";
 
 // Variables to be exposed to the API
 int temperature;

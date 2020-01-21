@@ -19,7 +19,7 @@ PubSubClient client(espClient);
 aREST rest = aREST(client);
 
 // Unique ID to identify the device for cloud.arest.io
-char* device_id = "47fd9g";
+char* device_id = "4d2a4b6j7";
 
 // WiFi parameters
 const char* ssid = "";

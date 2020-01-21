@@ -2,11 +2,12 @@ import requests, json
 from bs4 import BeautifulSoup
 
 class ESP:
-    def __init__(self,name,ip):
+    def __init__(self,name,id):
         self.name=name
-        self.ip = ip
+        self.id = id
         self.components = {}
         self.status = {}
+        self.ip = "cloud.arest.io/"
 
     def return_value(self,url,key):
         state = requests.get(url)
@@ -26,8 +27,7 @@ class ESP:
             self.update_status(component, state)
         except: 
             ConnectionError
-    
-    
+     
     def esp_status(self):
         try:
             status = self.return_value(self.ip, 'connected')
@@ -43,3 +43,7 @@ class ESP:
             return status
         except:
             ConnectionError
+
+    def get_data(self, component):
+        pin = self.components[component]
+        self.return_value(self.ip + "digital/" + pin + 'r')

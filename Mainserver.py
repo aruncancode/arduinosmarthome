@@ -4,10 +4,10 @@ from ESP import ESP
 
 app = Flask(__name__)
 
-esp1 = ESP("esp1", "http://192.168.0.21/")
+esp1 = ESP("esp1", "id")
 esp1.components = {"LED1": "5", "LED2": "6"}
 
-esp2 = ESP("esp2", "http://192.168.0.22/")
+esp2 = ESP("esp2", "id")
 esp2.components = {"LED3": "5", "LED4": "6"}
 
 @app.route('/', methods=['POST', 'GET'])

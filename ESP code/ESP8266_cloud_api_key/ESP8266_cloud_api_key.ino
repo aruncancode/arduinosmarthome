@@ -3,13 +3,14 @@
   This example illustrate the cloud part of aREST that makes the board accessible from anywhere
   See the README file for more details.
 
-  Written in 2015 by Marco Schwartz under a GPL license.
+  Written in 2016 by Marco Schwartz under a GPL license.
 */
 
 // Import required libraries
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <aREST.h>
+
 
 // Clients
 WiFiClient espClient;
@@ -18,12 +19,12 @@ PubSubClient client(espClient);
 // Create aREST instance
 aREST rest = aREST(client);
 
-// Unique ID to identify the device for cloud.arest.io
-char* device_id = "47fd9g";
+// aREST API key (that you can get at dashboard.arest.io)
+char * key = "";
 
 // WiFi parameters
-const char* ssid = "ArjunanAccess";
-const char* password = "rh56956hsv";
+const char* ssid = "";
+const char* password = "";
 
 // Variables to be exposed to the API
 int temperature;
@@ -37,6 +38,9 @@ void setup(void)
   // Start Serial
   Serial.begin(115200);
 
+  // Set aREST API key
+  rest.setKey(key);
+
   // Set callback
   client.setCallback(callback);
 
@@ -46,8 +50,10 @@ void setup(void)
   rest.variable("temperature",&temperature);
   rest.variable("humidity",&humidity);
 
-  // Give name & ID to the device (ID should be 6 characters long)
-  rest.set_id(device_id);
+  // Give ID to device (optional, if not set, a device ID will be auto-assigned to the device)
+  rest.set_id("ws8bg538ug8ijb9s");
+
+  // Give name to device
   rest.set_name("esp8266");
 
   // Connect to WiFi
@@ -58,7 +64,6 @@ void setup(void)
   }
   Serial.println("");
   Serial.println("WiFi connected");
-  Serial.println(WiFi.localIP());
 
   // Set output topic
   char* out_topic = rest.get_topic();

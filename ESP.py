@@ -43,7 +43,3 @@ class ESP:
             return status
         except:
             ConnectionError
-    
-
-
-#hi hi

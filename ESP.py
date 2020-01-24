@@ -6,10 +6,11 @@ from bs4 import BeautifulSoup
 class ESP:
     def __init__(self, name, id):
         self.name = name
-        self.id = id
+        self.id = id + '/'
         self.components = {}
         self.status = {}
-        self.ip = "cloud.arest.io/"
+        self.ip = "https://cloud.arest.io/" + self.id
+        print('ip: ' + self.ip)
 
     def return_value(self, url, key):
         state = requests.get(url)
@@ -30,12 +31,12 @@ class ESP:
         except:
             ConnectionError
 
-    def esp_status(self):
-        try:
-            status = self.return_value(self.ip, 'connected')
-            return status
-        except:
-            ConnectionError
+    # def esp_status(self):
+    #     try:
+    #         status = self.return_value(self.ip, 'connected')
+    #         return status
+    #     except:
+    #         ConnectionError
 
     def boot_status(self, component):
         pin = self.components[component]
@@ -47,6 +48,6 @@ class ESP:
         except:
             ConnectionError
 
-    def get_data(self, component):
-        pin = self.components[component]
-        self.return_value(self.ip + "digital/" + pin + 'r')
+    # def get_data(self, component):
+    #     pin = self.components[component]
+    #     self.return_value(self.ip + "digital/" + pin + 'r')

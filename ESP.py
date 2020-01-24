@@ -10,7 +10,7 @@ class ESP:
         self.components = {}
         self.status = {}
         self.ip = "https://cloud.arest.io/" + self.id
-        print('ip: ' + self.ip)
+        print(self.name + ' ip: ' + self.ip)
 
     def return_value(self, url, key):
         state = requests.get(url)

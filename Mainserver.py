@@ -5,7 +5,7 @@ from ESP import ESP
 app = Flask(__name__)
 
 esp1 = ESP("esp1", "4d2a4b6j7")
-esp1.components = {"LED1": "5", 'LM35':'A0'}
+esp1.components = {"LED1": "5"}
 
 esp2 = ESP("esp2", "4d2a4b6j8")
 esp2.components = {"LED2": "5"}

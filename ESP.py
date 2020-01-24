@@ -27,7 +27,7 @@ class ESP:
         try:
             pin = self.components[component]
             requests.get(self.ip + "digital/" + pin + "/" + state)
-            self.update_status(component, state)
+            # self.update_status(component, state)
         except:
             ConnectionError
 

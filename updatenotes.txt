@@ -45,3 +45,17 @@ Major improvments:
 Indevelopment/Future updates:
 	- databases/logs (csv files/ excel)
 	- improved gui for webpage
+
+
+
+
+#ASP VERSION 0.8 - 24/1/20
+
+Major improvments:
+	- can access esp from anywhere
+
+Indevelopment/Future updates:
+	- thingspeak instead of excel db
+	- fully integrated google home control
+	- access of sensor data
+	- improved gui for webpage

@@ -48,6 +48,6 @@ class ESP:
         except:
             ConnectionError
 
-    # def get_data(self, component):
-    #     pin = self.components[component]
-    #     self.return_value(self.ip + "digital/" + pin + 'r')
+    # def read_sensor(self, variable):
+    #     data = self.return_value(self.ip + variable, 'temperature')
+    #     return data
